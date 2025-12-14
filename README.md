@@ -1,6 +1,5 @@
 <div align="center">
     <h3 align="center" style="font-size: 35px">Tradesight</h3>
-    <p>Converts Trade Republic PDFs to CSV/XLSX/JSON</p>
     <p align="center">
         <a href="README.md">🇬🇧 English version</a>
         &nbsp;•&nbsp;
