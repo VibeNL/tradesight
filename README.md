@@ -24,7 +24,7 @@
 - [▶️ Usage](#️-usage)
 - [🤖 Recommended Models](#-recommended-models)
 - [📤 Output](#-output)
-- [✅ Testing](#-testing)
+- [💻 Platform Support](#-platform-support)
 - [🛠️ Troubleshooting](#-troubleshooting)
 - [📌 Notes & Limitations](#-notes--limitations)
 - [📄 License](#-license)
@@ -35,6 +35,14 @@
 - Language-flexible: keeps the headers/values exactly as they appear in the PDF (no translations); works across Trade Republic locales.
 - Summary-aware: skips account overviews, rollups, and liquidity/market-value summaries; focuses on the transaction tables.
 - Single file per PDF (CSV, XLSX, or JSON): `<pdf_name>.<ext>` with all rows in the original column order (headers normalized to lowercase).
+
+## 💻 Platform Support
+
+| OS | Status | Notes |
+| --- | --- | --- |
+| Linux | Supported / tested | Primary development platform |
+| Windows | Supported / tested | - |
+| macOS (Apple Silicon) | Not yet tested | Planned |
 
 ## ⚠️ Disclaimers
 
@@ -176,20 +184,6 @@ You can override the model/URL at runtime: `python3 main.py --model <name> --oll
 - Headers are normalized to lowercase but keep the PDF order; case-duplicate headers are collapsed.
 - Rows exclude summary/overview/liquidity/portfolio tables; only transaction tables remain.
 
-## ✅ Testing
-
-- OS coverage
-  | OS | Status | Notes |
-  | --- | --- | --- |
-  | Linux | Supported / tested | Primary development platform |
-  | macOS (Apple Silicon) | Not yet tested | Planned |
-  | Windows | Supported | - |
-
-- Model coverage by OS
-  | Model \| OS | Linux | macOS (Apple Silicon) | Windows |
-  | --- | --- | --- | --- |
-  | ministral-3:8b | ✅  | Planned | ✅ |
-  | qwen2.5vl:3b | ⚠️ Works but noticeably inaccurate | Planned | ⚠️ Works but noticeably inaccurate |
 
 ## 🛠️ Troubleshooting
 

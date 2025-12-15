@@ -18,6 +18,7 @@
 ## 📚 Indice
 
 - [🚀 Panoramica](#-panoramica)
+- [💻 Supporto Piattaforme](#-supporto-piattaforme)
 - [⚠️ Avvertenze](#️-avvertenze)
 - [🧰 Requisiti](#-requisiti)
 - [🛠️ Installazione](#️-installazione-unix)
@@ -25,16 +26,23 @@
 - [▶️ Utilizzo](#️-utilizzo)
 - [🤖 Modelli consigliati](#-modelli-consigliati)
 - [📤 Output](#-output)
-- [✅ Test](#-test)
 - [🛠️ Troubleshooting](#-troubleshooting)
 - [📄 Licenza](#-licenza)
 
 ## 🚀 Panoramica
 
-- Pipeline vision-first: rende ogni pagina PDF un’immagine, la migliora e chiede al modello visivo di restituire le righe della tabella.
+- Pipeline vision-first: rende ogni pagina PDF un'immagine, la migliora e chiede al modello visivo di restituire le righe della tabella.
 - Flessibile per lingua: mantiene header/valori esattamente come nel PDF (niente traduzioni); funziona con le varianti locali di Trade Republic.
 - Attento ai riepiloghi: salta overview conto/saldo, rollup e riepiloghi liquidità/market value; si concentra sulle tabelle transazioni.
-- Un file per PDF (CSV, XLSX o JSON): `<nome_pdf>.<ext>` con tutte le righe nell’ordine originale delle colonne (header normalizzati in minuscolo).
+- Un file per PDF (CSV, XLSX o JSON): `<nome_pdf>.<ext>` con tutte le righe nell'ordine originale delle colonne (header normalizzati in minuscolo).
+
+## 💻 Supporto Piattaforme
+
+| OS | Stato | Note |
+| --- | --- | --- |
+| Linux | Supportato / testato | Piattaforma principale di sviluppo |
+| Windows | Supportato / testato | - |
+| macOS (Apple Silicon) | Non ancora testato | In programma |
 
 ## ⚠️ Avvertenze
 
@@ -177,20 +185,6 @@ Puoi sovrascrivere modello/URL a runtime: `python3 main.py --model <nome> --olla
 - Header normalizzati in minuscolo ma nell’ordine del PDF; header duplicati solo per maiuscole/minuscole sono unificati.
 - Le righe escludono overview/riepiloghi/liquidità/portfolio; rimangono solo le tabelle transazioni.
 
-## ✅ Test
-
-- Copertura OS
-  | OS | Stato | Note |
-  | --- | --- | --- |
-  | Linux | Supportato / testato | Piattaforma principale di sviluppo |
-  | macOS (Apple Silicon) | Non ancora testato | In programma |
-  | Windows | Supportato | - |
-
-- Copertura modelli per OS
-  | Modello \\ OS | Linux | macOS (Apple Silicon) | Windows |
-  | --- | --- | --- | --- |
-  | ministral-3:8b | ✅ | Pianificato | ✅ |
-  | qwen2.5vl:3b | ⚠️ Funziona ma poco accurato | Pianificato | ✅ |
 
 ## 🛠️ Troubleshooting
 
