@@ -1079,7 +1079,7 @@ def main(
         console.print(f"[error]Input directory not found: {input_dir}[/error]")
         return
 
-    pdf_files = list(input_dir.glob('*.pdf')) + list(input_dir.glob('*.PDF'))
+    pdf_files = list(set(input_dir.glob('*.pdf')) | set(input_dir.glob('*.PDF')))
     if not pdf_files:
         console.print(f"[warning]No PDF files found in {input_dir}[/warning]")
         return
